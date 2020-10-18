@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Titulo</h1>
+    <h2>Subtitulo</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dignissimos provident accusantium! Similique amet, eum magnam temporibus dolore ullam aliquid quaerat corrupti consectetur unde nisi facere explicabo minus. Suscipit, impedit.</p>
+    <form (submit)="add(newUser)" >
+     <input type="text" #newUser>
+     <button>
+         Submit
+     </button>
+    </form>
+    <ul>
+        <li *ngFor="let user of users">
+           {{user}} <button (click)="delete(user)">Delete</button>
+        </li>
+    </ul>
+    <div>
+        <form >
+            <input type="text" name="name" [(ngModel)]="name">
+            <input type="text" name="age" [(ngModel)]="age">
+        </form>
+        Nombre : {{name}} <br>
+        Edad : {{age}}
+    </div>
+
+</div>
+
